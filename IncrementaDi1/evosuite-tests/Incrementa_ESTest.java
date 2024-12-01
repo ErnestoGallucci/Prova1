@@ -16,13 +16,23 @@ import org.junit.runner.RunWith;
 @RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true) 
 public class Incrementa_ESTest extends Incrementa_ESTest_scaffolding {
 
-  @Test(timeout = 4000)
+  /*@Test(timeout = 4000)
   public void test0()  throws Throwable  {
       SystemInUtil.addInputLine("6 deXD8%7r");
       String[] stringArray0 = new String[0];
       Incrementa.main(stringArray0);
       assertEquals(0, stringArray0.length);
-  }
+  }*/
+
+  @Test(timeout = 4000)
+    public void testEmptyInputArray() throws Throwable {
+        SystemInUtil.addInputLine("6 deXD8%7r");
+        String[] inputArray = new String[0];
+
+        Incrementa.main(inputArray);
+
+        assertEquals("The input array should remain empty.", 0, inputArray.length);
+    }
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
