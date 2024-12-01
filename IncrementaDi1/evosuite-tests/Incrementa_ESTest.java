@@ -31,7 +31,7 @@ public class Incrementa_ESTest extends Incrementa_ESTest_scaffolding {
 
         Incrementa.main(inputArray);
 
-        assertEquals("The input array should remain empty.", 0, inputArray.length);
+        assertEquals("Input array should remain empty.", 0, inputArray.length);
     }
 
   @Test(timeout = 4000)
